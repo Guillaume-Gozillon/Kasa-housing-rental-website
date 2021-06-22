@@ -1,7 +1,9 @@
+import Home from '../src/pages/Home'
+
 function App() {
   return (
     <div className="App">
-      <h1>Kasa</h1>
+      <Home/>
     </div>
   );
 }
