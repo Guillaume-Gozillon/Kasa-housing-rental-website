@@ -27,13 +27,11 @@
 .home-content {
     display: flex;
     margin: 1rem 3rem;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 1rem;
     background: #F6F6F6;
     border-radius: 10px;
-    display: flex;
     flex-wrap: wrap;
-    padding: 4rem;
 }
 
 .card {
@@ -81,6 +79,46 @@
         }
         &::after{
             opacity: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .home-content {
+        padding: 0rem;
+    }
+    .home .home-image {
+        min-height: initial;
+        height: 16rem;
+        & h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .home-content {
+        margin: 0;
+        background: white;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .card {
+        width: 100vh;
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        padding: 2rem 1rem;
+    }
+    .home .home-image {
+        min-height: initial;
+        height: 12rem;
+        & h1 {
+            font-size: 2rem;
         }
     }
 }
