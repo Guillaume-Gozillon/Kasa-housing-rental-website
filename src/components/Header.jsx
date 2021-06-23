@@ -1,9 +1,9 @@
 import logo from '../img/logo.png'
 import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Header = () => {
     return (
-        <div className='navbar'>
+        <div className='header'>
             <img src={logo} className='logo' alt="logo" />
             <ul>
                 <li>
@@ -17,4 +17,4 @@ const Nav = () => {
     )
 }
 
-export default Nav
+export default Header

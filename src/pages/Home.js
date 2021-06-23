@@ -1,11 +1,11 @@
 import HomeBanner from "../components/HomeBanner"
 import HomeContent from "../components/HomeContent"
 
-const Home = () => {
+const Home = ({data}) => {
     return (
         <div>
             <HomeBanner/>
-            <HomeContent/>
+            <HomeContent data={data}/>
         </div>
     )
 }

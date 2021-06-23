@@ -8,6 +8,15 @@ html {
     font-size: 62.5%;
 }
 
+.App {
+    max-width: 150rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     padding: 2rem 4rem;
