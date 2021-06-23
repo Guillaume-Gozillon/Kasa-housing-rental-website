@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
+html {
+    font-size: 62.5%;
 }
 
-@import './home'
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem 4rem;
+}
+
+@import './home';
+@import './nav';

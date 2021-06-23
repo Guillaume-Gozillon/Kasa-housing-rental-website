@@ -2,16 +2,15 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    background: aquamarine;
     & .home-image {
         background-image: url(../img/home.jpg);
         background-color: rgba(0, 0, 0, 0.301);
         background-blend-mode: overlay;
-        height: 223px;
-        width: 1240px;
+        width: 100%;
+        min-height: 20rem;
+        height: auto;
         border-radius: 2rem;
         overflow: hidden;
-        border: solid black 3px;
         background-size: cover;
         margin: 3rem;
         display: flex;
@@ -20,7 +19,16 @@
         & h1 {
             color: white;
             font-weight: 300;
-            font-size: 3.2rem;
+            font-size: 5rem;
         }
     }
+}
+
+.home-content {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    background: red;
 }
