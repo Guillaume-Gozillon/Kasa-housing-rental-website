@@ -17,10 +17,14 @@ html {
     margin: auto;
 }
 
+
 body {
     font-family: 'Montserrat', sans-serif;
+    /*
     padding: 2rem 4rem;
+    */
 }
 
 @import './home';
-@import './nav';
+@import './header';
+@import './footer';

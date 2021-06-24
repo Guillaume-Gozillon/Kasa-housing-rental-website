@@ -1,12 +1,12 @@
 import "./styles/app.scss";
 import Home from '../src/pages/Home'
-import Nav from "./components/Header";
+import Header from "./components/Header";
 import data from './data.json'
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <Header/>
       <Home data={data}/>
     </div>
   );

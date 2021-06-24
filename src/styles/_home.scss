@@ -2,6 +2,7 @@
     display: flex;
     margin: auto;
     justify-content: center;
+    padding: 0 4rem;
     & .home-image {
         background-image: url(../img/home.jpg);
         background-color: rgba(0, 0, 0, 0.301);
@@ -26,9 +27,9 @@
 
 .home-content {
     display: flex;
-    margin: 1rem 3rem;
+    margin: 1rem 7rem 3rem;
     justify-content: space-evenly;
-    padding: 1rem;
+    padding: 1rem 5rem;
     background: #F6F6F6;
     border-radius: 10px;
     flex-wrap: wrap;
@@ -104,6 +105,9 @@
 }
 
 @media only screen and (max-width: 840px) {
+    .home {
+        padding: 0;
+    }
     .card {
         width: 100vh;
         height: 60vh;

@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 5rem 2rem;
+    color: #FF6060;
+    & .logo {
+        width: 15rem;
+        height: auto;
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        & :first-child{
+            margin-right: 2rem;
+        }
+        & li {
+            list-style: none;
+            font-size: 2rem;
+        }
+    }
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #FF6060;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .header {
+        margin: 4rem 3rem 2rem;
+        & .logo {
+            width: 10rem;
+            height: auto;
+        }
+        & ul {
+            display: flex;
+            align-items: center;
+            & :first-child{
+                margin-right: 1rem;
+            }
+            & li {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
