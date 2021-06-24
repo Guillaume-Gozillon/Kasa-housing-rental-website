@@ -2,7 +2,7 @@ import Toggle from "./Toggle"
 
 const Faq = () => {
     return (
-        <>
+        <div className='faq-container'>
             <Toggle title='Fiabilité'>
                 <div className='services'>
                     <div className='toggle'>
@@ -31,8 +31,7 @@ const Faq = () => {
                     </div>
                 </div>
             </Toggle>
-        </>
-            
+        </div>
     )
 }
 
