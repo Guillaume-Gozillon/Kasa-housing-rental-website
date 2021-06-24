@@ -1,3 +1,33 @@
 .apropos {
     background-image: url(../img/apropos.jpg) !important;
 }
+
+.faq {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin: 3rem 10rem;
+    background: #F6F6F6;
+    border-radius: .6rem;
+    flex-direction: column;
+    & .faq-title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: #FF6060;
+        border-radius: 1.2rem;
+        align-content: center;
+        align-items: center;
+        color: white;
+        padding: 0.1rem 1.5rem;
+    }
+    & h2, i {
+        font-size: 3rem;
+        padding: .6rem;
+    }
+    & p {
+        font-size: 2rem;
+        padding: 2rem;
+        color: #FF6060;
+    }
+}
