@@ -5,7 +5,7 @@ import Header from "../components/Header"
 
 const Home = ({data}) => {
     return (
-        <div>
+        <div className='test'>
             <Header/>
             <HomeBanner/>
             <HomeContent data={data}/>

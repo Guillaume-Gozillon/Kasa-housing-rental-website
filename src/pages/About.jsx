@@ -3,7 +3,7 @@ import Header from "../components/Header"
 
 function About() {
     return (
-        <div className='home'>
+        <div>
             <Header/>
             <AboutBanner/>
         </div>
