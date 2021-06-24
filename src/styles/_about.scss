@@ -3,9 +3,12 @@
 }
 
 .faq-container {
-    height: 70vh;
+    padding: 1rem;
 }
 
+.faq-section {
+    height: 70vh;
+}
 .faq {
     display: flex;
     margin: auto;
@@ -15,6 +18,7 @@
     border-radius: .6rem;
     flex-direction: column;
     & .faq-title {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         width: 100%;
