@@ -2,6 +2,8 @@ import { useHistory } from "react-router-dom"
 import { useState, useEffect } from "react"
 import data from '../data.json' 
 import Header from "./Header"
+import Toggle from "./Toggle"
+import Footer from "./Footer"
 
 // Création des CARTE en fonction de leur ID
 const Rental = () => {
@@ -43,6 +45,25 @@ const Rental = () => {
                     </div>
                 </div>
             )}
+            {accomodation && (
+                <div className="rental-toggle">
+                    <Toggle className='collapse' title='Description'>
+                        <div className='services'>
+                            <div className='toggle'>
+                                <p>{accomodation.description}</p>
+                            </div>
+                        </div>
+                    </Toggle>
+                    <Toggle className='collapse' title='Equipement'>
+                        <div className='services'>
+                            <div className='toggle'>
+                                <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+                            </div>
+                        </div>
+                    </Toggle>
+                </div>
+            )}
+            <Footer/>
         </>
     )
 }
