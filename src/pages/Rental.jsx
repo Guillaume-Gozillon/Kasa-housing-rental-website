@@ -1,9 +1,9 @@
 import { useHistory } from "react-router-dom"
 import { useState, useEffect } from "react"
 import data from '../data.json' 
-import Header from "./Header"
-import Toggle from "./Toggle"
-import Footer from "./Footer"
+import Header from "../components/Header"
+import Toggle from "../components/Toggle"
+import Footer from "../components/Footer"
 
 // Création des CARTE en fonction de leur ID
 const Rental = () => {
@@ -15,7 +15,7 @@ const Rental = () => {
 
     useEffect(() => {
         const currentAccomodation = accomodations
-            .filter((stateAccomodation) => `/${stateAccomodation.id}` === url)
+            .filter(logement => `/rental/${logement.id}` === url)
             
         setAccomodation(currentAccomodation[0])
     }, [accomodations, url])
@@ -57,7 +57,7 @@ const Rental = () => {
                     <Toggle className='collapse' title='Equipement'>
                         <div className='services'>
                             <div className='toggle'>
-                                <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+                                {accomodation.equipments.map(x => <p>{x}</p>)}
                             </div>
                         </div>
                     </Toggle>
