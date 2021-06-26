@@ -43,6 +43,7 @@
 .rental-right {
     display: flex;
     align-items: center;
+    flex-direction: column;
     & img {
         border-radius: 50%;
         width: 8rem;
@@ -121,6 +122,10 @@
 
 .empty {
     color: gray;
+}
+
+.stars {
+    display: flex;
 }
 
 @media only screen and (max-width: 880px) {

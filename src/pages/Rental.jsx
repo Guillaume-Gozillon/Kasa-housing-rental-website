@@ -55,11 +55,16 @@ const Rental = () => {
                             </ul>
                         </div>
                         <div className="rental-right">
-                            <p>{accomodation.host.name}</p>
-                            <img 
-                                src={accomodation.host.picture} 
-                                alt={`Photo de ${accomodation.host.name}`} />
+                            <div>
+                                <p>{accomodation.host.name}</p>
+                                <img 
+                                    src={accomodation.host.picture} 
+                                    alt={`Photo de ${accomodation.host.name}`} 
+                                />
+                            </div>
+                            <div className='stars'>
                                 {getStars()}
+                            </div>
                         </div>
                     </div>
                 </div>)}
