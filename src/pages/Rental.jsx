@@ -21,17 +21,19 @@ const Rental = () => {
         setAccomodation(currentAccomodation[0])
     }, [accomodations, url])
 
+
     return (
         <div>
             <Header/>
             {accomodation && (
                 <div className='rental-container'>
-                    <Slider accomodation={accomodation} />
-                    <img 
-                        className='rental-image' 
-                        src={accomodation.cover} 
-                        alt={accomodation.title} 
-                    />
+                    {accomodation.pictures.length <= 1 
+                    ? <img 
+                    className='rental-image' 
+                    src={accomodation.cover} 
+                    alt={accomodation.title} 
+                />
+                    : <Slider accomodation={accomodation} />}
                     <div className='rental-info'>
                         <div className='rental-left'>
                             <h1>{accomodation.title}</h1>

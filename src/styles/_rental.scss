@@ -100,6 +100,10 @@
 .slide{
     opacity: 0;
     transition-duration: 1s ease;
+    overflow: hidden;
+    & img {
+        object-fit: cover;
+    }
 }
 
 .slide.active {
