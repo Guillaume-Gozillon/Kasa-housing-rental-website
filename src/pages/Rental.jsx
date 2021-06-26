@@ -21,6 +21,19 @@ const Rental = () => {
         setAccomodation(currentAccomodation[0])
     }, [accomodations, url])
 
+    const getStars = () => {
+        const stars = []
+        const rating = accomodation.rating
+
+        for (let i = 1; i <= 5; i++) {
+           if (i <= rating) {
+            stars.push(<i class="fas fa-star"></i>)
+           } else {
+            stars.push(<i class="fas fa-star empty"></i>)
+           }
+        }
+        return stars
+    }
 
     return (
         <div>
@@ -29,10 +42,9 @@ const Rental = () => {
                 <div className='rental-container'>
                     {accomodation.pictures.length <= 1 
                     ? <img 
-                    className='rental-image' 
-                    src={accomodation.cover} 
-                    alt={accomodation.title} 
-                />
+                        className='rental-image' 
+                        src={accomodation.cover} 
+                        alt={accomodation.title} />
                     : <Slider accomodation={accomodation} />}
                     <div className='rental-info'>
                         <div className='rental-left'>
@@ -44,29 +56,37 @@ const Rental = () => {
                         </div>
                         <div className="rental-right">
                             <p>{accomodation.host.name}</p>
-                            <img src={accomodation.host.picture} alt="" />
+                            <img 
+                                src={accomodation.host.picture} 
+                                alt={`Photo de ${accomodation.host.name}`} />
+                                {getStars()}
                         </div>
                     </div>
-                </div>
-            )}
-            {accomodation && (
-                <div className="rental-toggle">
-                    <Toggle className='collapse' title='Description'>
-                        <div className='services'>
-                            <div className='toggle'>
-                                <p>{accomodation.description}</p>
-                            </div>
+                </div>)}
+
+                {accomodation && (
+                    <div className="rental-toggle">
+                        <div className='separator'>
+                            <Toggle className='collapse' title='Description'>
+                                <div className='services'>
+                                    <div className='toggle'>
+                                        <p>{accomodation.description}</p>
+                                    </div>
+                                </div>
+                            </Toggle>
                         </div>
-                    </Toggle>
-                    <Toggle className='collapse' title='Equipement'>
-                        <div className='services'>
-                            <div className='toggle'>
-                                {accomodation.equipments.map(x => <p>{x}</p>)}
-                            </div>
+
+                        <div className='separator'>                        
+                            <Toggle className='collapse' title='Equipement'>
+                                <div className='services'>
+                                    <div className='toggle'>
+                                        {accomodation.equipments.map(x => <p>{x}</p>)}
+                                    </div>
+                                </div>
+                            </Toggle>
                         </div>
-                    </Toggle>
-                </div>
-            )}
+                    </div>
+                )}
             <Footer/>
         </div>
     )
