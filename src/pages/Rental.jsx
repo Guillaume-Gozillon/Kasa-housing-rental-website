@@ -4,6 +4,7 @@ import data from '../data.json'
 import Header from "../components/Header"
 import Toggle from "../components/Toggle"
 import Footer from "../components/Footer"
+import Slider from "../components/Slider"
 
 // Création des CARTE en fonction de leur ID
 const Rental = () => {
@@ -21,10 +22,11 @@ const Rental = () => {
     }, [accomodations, url])
 
     return (
-        <>
+        <div>
             <Header/>
             {accomodation && (
                 <div className='rental-container'>
+                    <Slider accomodation={accomodation} />
                     <img 
                         className='rental-image' 
                         src={accomodation.cover} 
@@ -64,7 +66,7 @@ const Rental = () => {
                 </div>
             )}
             <Footer/>
-        </>
+        </div>
     )
 }
 

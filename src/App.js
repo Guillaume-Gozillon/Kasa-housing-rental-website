@@ -13,10 +13,10 @@ const App = () => {
         <Route path='/' exact >
           <Home data={data}/>
         </Route>
-        <Route path='/a-propos' >
+        <Route path='/a-propos' exact >
           <About/>
         </Route>
-        <Route path='/rental/:id' >
+        <Route path='/rental/:id' exact >
           <Rental/>
         </Route>
         <Route component={NotFound} />

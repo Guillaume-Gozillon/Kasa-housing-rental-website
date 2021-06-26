@@ -59,3 +59,51 @@
         width: 100%;
     }
 }
+
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    overflow: hidden;
+}
+
+
+.arrow-right {
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow-left {
+    transform: rotate(180deg);
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.image-slider {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.slide{
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
