@@ -55,7 +55,7 @@ const Rental = () => {
                             </ul>
                         </div>
                         <div className="rental-right">
-                            <div>
+                            <div className='rental-profil'>
                                 <p>{accomodation.host.name}</p>
                                 <img 
                                     src={accomodation.host.picture} 
