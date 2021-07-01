@@ -4,7 +4,7 @@ const HomeContent = ({data}) => {
     return (
         <div className='home-content'>
             {data.map(item => 
-                <Cards item={item} />
+                <Cards key={item.id} item={item} />
             )}
         </div>
     )

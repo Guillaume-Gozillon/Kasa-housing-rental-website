@@ -27,9 +27,9 @@ const Rental = () => {
 
         for (let i = 1; i <= 5; i++) {
            if (i <= rating) {
-            stars.push(<i class="fas fa-star"></i>)
+            stars.push(<i key={i} className="fas fa-star"></i>)
            } else {
-            stars.push(<i class="fas fa-star empty"></i>)
+            stars.push(<i key={i} className="fas fa-star empty"></i>)
            }
         }
         return stars
@@ -51,7 +51,9 @@ const Rental = () => {
                             <h1>{accomodation.title}</h1>
                             <h2>{accomodation.location}</h2>
                             <ul>
-                                {accomodation.tags.map(item => <li>{item}</li>)}
+                                {accomodation.tags.map((item, index) => (
+                                    <li key={index}>{item}</li>)
+                                )}
                             </ul>
                         </div>
                         <div className="rental-right">
@@ -85,7 +87,9 @@ const Rental = () => {
                             <Toggle className='collapse' title='Equipement'>
                                 <div className='services'>
                                     <div className='toggle'>
-                                        {accomodation.equipments.map(x => <p>{x}</p>)}
+                                        {accomodation.equipments.map((x, index) => (
+                                            <p key={index}>{x}</p>)
+                                        )}
                                     </div>
                                 </div>
                             </Toggle>

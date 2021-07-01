@@ -6,7 +6,7 @@ const Toggle = ({children, title}) => {
         <div className='faq active' onClick={() => setToggle(!toggle)}>
             <div className='faq-title'>
                 <h2>{title}</h2>
-                <i class="fas fa-chevron-down"></i>
+                <i className="fas fa-chevron-down"></i>
             </div>
             {toggle && children}
         </div>
