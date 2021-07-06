@@ -6,6 +6,8 @@ import Rental from "./pages/Rental"
 import { Switch, Route } from "react-router"
 import NotFound from "./pages/NotFound"
 
+import React from "react"
+
 const App = () => {
   return (
     <div className="App">
