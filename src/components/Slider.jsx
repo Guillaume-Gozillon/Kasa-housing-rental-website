@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import arrow from '../img/arrow.svg'
 
 class Slider extends React.Component {

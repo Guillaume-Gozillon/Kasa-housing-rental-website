@@ -18,11 +18,6 @@ const App = () => {
         <Route path='/a-propos' exact >
           <About/>
         </Route>
-        {/*
-        <Route path='/rental/:id' >
-          <Rental/>
-        </Route>
-        */}
         <Route
             path='/rental/:id'
             render={props => <Rental {...props} />}
