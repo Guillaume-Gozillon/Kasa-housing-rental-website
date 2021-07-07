@@ -14,9 +14,9 @@ class Rental extends React.Component {
         this.url = props.history.location.pathname
     }
 
-    getStars = () => {
+    getStars = (test) => {
         const stars = []
-        const rating = accomodation.rating
+        const rating = test.rating
 
         for (let i = 1; i <= 5; i++) {
            if (i <= rating) {
@@ -28,7 +28,6 @@ class Rental extends React.Component {
         return stars
     }
 
-
     render() {
         const currentAccomodation = data
             .filter(logement => `/rental/${logement.id}` === this.url)[0]
@@ -39,7 +38,7 @@ class Rental extends React.Component {
 
         return (
             <div>
-                <Header/>
+                <Header />
                 {currentAccomodation && (
                     <div className='rental-container'>
                         {currentAccomodation.pictures.length <= 1 
@@ -67,7 +66,7 @@ class Rental extends React.Component {
                                     />
                                 </div>
                                 <div className='stars'>
-                                    {this.getStars}
+                                    {this.getStars(currentAccomodation)}
                                 </div>
                             </div>
                         </div>
@@ -98,7 +97,7 @@ class Rental extends React.Component {
                             </div>
                         </div>
                     )}
-                <Footer/>
+                <Footer />
             </div>
         )
     }

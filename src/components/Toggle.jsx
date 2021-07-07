@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from 'react'
 
 class Toggle extends React.Component {
     constructor(children) {
