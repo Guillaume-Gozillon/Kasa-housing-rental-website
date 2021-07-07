@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import arrow from '../img/arrow.svg'
 
 class Slider extends React.Component {
-    constructor(accomodation) {
-        super(accomodation)
+    constructor(currentAccomodation) {
+        super(currentAccomodation)
 
-        this.accomodation = accomodation.accomodation
+        this.currentAccomodation = currentAccomodation.currentAccomodation
         this.state = { image: 0 }
-        this.length = accomodation.accomodation.pictures.length
+        this.length = currentAccomodation.currentAccomodation.pictures.length
     }
 
     nextSlide = () => {
@@ -45,7 +45,7 @@ class Slider extends React.Component {
                     className=' arrow arrow-left' 
                     onClick={this.prevSlide} 
                 />
-                {this.accomodation.pictures.map((slide, index) => {
+                {this.currentAccomodation.pictures.map((slide, index) => {
                     return (
                         <div 
                             className={index === this.state.image 
@@ -54,7 +54,7 @@ class Slider extends React.Component {
                             {index === this.state.image  && (
                                 <img 
                                     src={slide} 
-                                    alt={this.accomodation.title}
+                                    alt={this.currentAccomodation.title}
                                     className='image-slider' 
                                 />
                             )}
