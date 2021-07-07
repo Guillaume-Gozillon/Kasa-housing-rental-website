@@ -7,15 +7,11 @@ import Slider from "../components/Slider"
 
 import { Redirect } from "react-router-dom";
 
-// Création des CARTE en fonction de leur ID
 class Rental extends React.Component {
 
     constructor(props) {
         super(props)
         this.url = props.history.location.pathname
-
-        // this.state = { accomodation: null }
-        this.data = data
     }
 
     getStars = () => {
@@ -34,12 +30,10 @@ class Rental extends React.Component {
 
 
     render() {
-        const currentAccomodation = this.data
+        const currentAccomodation = data
             .filter(logement => `/rental/${logement.id}` === this.url)[0]
 
-        console.log(this.url, currentAccomodation);
-
-        if (currentAccomodation === undefined) {
+        if (currentAccomodation === undefined) { 
             return <Redirect to="/404" />
         }
 
