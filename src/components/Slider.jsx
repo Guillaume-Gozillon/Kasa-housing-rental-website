@@ -15,10 +15,6 @@ class Slider extends React.Component {
             ? this.state.image = 0 
             : this.state.image += 1
 
-            console.log('setState', next)
-            console.log('state', this.state.image);
-            console.log('tableau', this.length );
-
         this.setState({
             next
         })
