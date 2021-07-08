@@ -1,6 +1,6 @@
-import Header, { Component } from "../components/Header"
+import Header from "../components/Header"
 import { Link } from "react-router-dom"
-import React from "react"
+import React, { Component } from "react"
 
 class NotFound extends Component {
     render() {

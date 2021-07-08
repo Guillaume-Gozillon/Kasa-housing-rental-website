@@ -23,14 +23,20 @@
 
 .rental-left {
     padding: 3rem 0;
-    & li {
-        font-size: 1.5rem;
-        background: #FF6060;
-        padding: 0.35rem 1.3rem;
-        color: white;
-        display: inline;
-        margin-right: 2rem;
-        border-radius: 1rem;
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        & li {
+            font-size: 1.5rem;
+            background: #FF6060;
+            padding: 0.35rem 1.3rem;
+            color: white;
+            display: inline;
+            margin-right: 2rem;
+            border-radius: 1rem;
+            white-space: nowrap;
+            margin: 0.5rem;
+        }
     }
     & h1 {
         margin-bottom: .6rem;
@@ -81,7 +87,6 @@
     overflow: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     border-radius: 2.5rem;
-    height: 70vh;
 }
 
 .arrow-right {
@@ -157,6 +162,9 @@
 
 @media only screen and (max-width: 560px) {
     .faq {
-        margin: 3rem 2rem;
+        margin: 1.6rem 2rem;
+    }
+    .slider {
+        width: 90vw;
     }
 }

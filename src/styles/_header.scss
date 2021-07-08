@@ -24,6 +24,25 @@ a:-webkit-any-link {
     color: #FF6060;
   }
 
+  @media only screen and (max-width: 560px) {
+    .header {
+        margin: 2rem 3rem 0rem;
+        & ul {
+            width: 70%;
+            justify-content: space-evenly;
+            & :first-child{
+                margin-right: 0rem;
+            }
+            & a {
+                font-size: 1.8rem;
+            }
+        }
+        & .logo {
+            width: 12rem;
+        }
+    }
+}
+
   @media only screen and (max-width: 400px) {
     .header {
         margin: 4rem 3rem 2rem;
@@ -34,9 +53,6 @@ a:-webkit-any-link {
         & ul {
             display: flex;
             align-items: center;
-            & :first-child{
-                margin-right: 1rem;
-            }
             & li {
                 font-size: 1.5rem;
             }

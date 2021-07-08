@@ -17,6 +17,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 2rem;
         & h1 {
             color: white;
             font-weight: 300;
@@ -123,7 +124,8 @@
         min-height: initial;
         height: 12rem;
         & h1 {
-            font-size: 2rem;
+            font-size: 1.9rem;
+            font-weight: 500;
         }
     }
     .card {
