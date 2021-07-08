@@ -29,3 +29,9 @@ li {list-style: none;}
 @import './about';
 @import './rental';
 @import './notfound';
+
+@media only screen and (max-width: 640px) {
+    body {
+        padding: 0;
+    }
+}
