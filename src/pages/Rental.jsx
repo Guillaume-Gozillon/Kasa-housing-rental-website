@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import data from '../data.json' 
 import Header from "../components/Header"
 import Toggle from "../components/Toggle"
@@ -7,16 +7,16 @@ import Slider from "../components/Slider"
 
 import { Redirect } from "react-router-dom";
 
-class Rental extends React.Component {
+class Rental extends Component {
 
     constructor(props) {
         super(props)
         this.url = props.history.location.pathname
     }
 
-    getStars = (test) => {
+    getStars = currentAccomodation => {
         const stars = []
-        const rating = test.rating
+        const rating = currentAccomodation.rating
 
         for (let i = 1; i <= 5; i++) {
            if (i <= rating) {

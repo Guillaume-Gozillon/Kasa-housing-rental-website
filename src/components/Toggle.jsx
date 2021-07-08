@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class Toggle extends React.Component {
+class Toggle extends Component {
     constructor(children) {
         super(children)
         this.state = { toggle: false } 
     }
 
     handleToggle = () => {
-        const toggled = this.state.toggle === false 
+        const toggleHandled = this.state.toggle === false 
             ? this.state.toggle = true 
             : this.state.toggle = false
 
         this.setState({
-            toggled
+            toggleHandled
         })
     }
 

@@ -1,10 +1,10 @@
-import React from "react"
+import React, { Component } from "react"
 import HomeBanner from "../components/HomeBanner"
 import HomeContent from "../components/HomeContent"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 
-class Home extends React.Component {
+class Home extends Component {
     constructor(data) {
         super(data)
         this.data = data
@@ -13,11 +13,11 @@ class Home extends React.Component {
     render() {
         return (
             <div className='test'>
-            <Header/>
-            <HomeBanner/>
-            <HomeContent data={this.data}/>
-            <Footer/>
-        </div>
+                <Header/>
+                <HomeBanner/>
+                <HomeContent data={this.data}/>
+                <Footer/>
+            </div>
         )
     }
 } 
