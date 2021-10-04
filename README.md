@@ -1,5 +1,5 @@
 # Openclassrooms | Project 11 
-## Kasa Jousing
+## Kasa Housing
 
 This project has been coded as a functional component (`master` branch), then in class component (`class-version`branch).
 
